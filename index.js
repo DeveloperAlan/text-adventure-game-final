@@ -18,16 +18,25 @@ function initialize() {
     readlineThing.question("What is your name? ", function(answer) {
         Name(answer);
         console.log('Hi there ' + answer + ", welcome to the game!")
-        readlineThing.question("Choose your class: (Mage, Warrior, Thief) ", function(answer) {
-            chooseClass(answer);            
-            readlineThing.question("Choose your gender: ", function(answer) {
-              gender(answer);
-              console.log(Player);
-              readlineThing.close();
-            })
-        })
+        askClass();
     })
 }
+
+function askClass() {
+    readlineThing.question("Choose your class: (Mage, Warrior, Thief) ", function(answer) {
+        chooseClass(answer);
+        askGender();
+    })
+}
+
+function askGender() {
+    readlineThing.question("Choose your gender: ", function(answer) {
+        gender(answer);
+        console.log(Player);
+        readlineThing.close();
+    })
+}
+
 
 var Player = {
     name: "Alan",
@@ -115,9 +124,9 @@ function chooseClass(answer) {
             console.log("This skill is a placeholder. It does nothing.");
         }
     } else {
-       readlineThing.question("Please enter a valid class: ", function(answer) {
-          chooseClass(answer); 
-       })
+        readlineThing.question("Please enter a valid class: ", function(answer) {
+            chooseClass(answer);
+        })
     }
 }
 
