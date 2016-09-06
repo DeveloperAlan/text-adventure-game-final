@@ -5,6 +5,7 @@ var readlineThing = readline.createInterface({
     output: process.stdout
 });
 
+//Game object which starts and can also restart the project at any point during the program. You can call this by typing in game.start or game.restart
 var game = {
     start: function() {
         initialize();
@@ -14,6 +15,7 @@ var game = {
     }
 }
 
+//initialize function that initializes the game when the game.start function has been called. Whwat the function does is ask the user for a name and then proceeds to do the next function, which is askClass()
 function initialize() {
     readlineThing.question("What is your name? ", function(answer) {
         Name(answer);
