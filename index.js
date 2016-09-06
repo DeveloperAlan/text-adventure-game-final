@@ -24,6 +24,8 @@ function initialize() {
     })
 }
 
+
+//askClass function that askes the user what class they would like to be.
 function askClass() {
     readlineThing.question("Choose your class: (Mage, Warrior, Thief) ", function(answer) {
         chooseClass(answer);
