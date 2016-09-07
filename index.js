@@ -45,6 +45,8 @@ function askGender() {
     })
 }
 
+var location = {};
+
 
 //Player default object so that the students understand what the object would be.
 var Player = {
