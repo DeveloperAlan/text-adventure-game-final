@@ -44,6 +44,7 @@ function askGender() {
     })
 }
 
+// starting point in the game
 function startingPoint() {
     console.log("The game master has dropped you off at town");
     readlineThing.close();
