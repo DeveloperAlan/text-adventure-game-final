@@ -39,10 +39,14 @@ function askClass() {
 //askGender function that asked the user what gender their character would liek to be.
 function askGender() {
     readlineThing.question("Choose your gender: ", function(answer) {
-        gender(answer);
-        console.log(Player);
-        readlineThing.close();
+        gender(answer);        
+        startingPoint();
     })
+}
+
+function startingPoint() {
+    console.log("The game master has dropped you off at town");
+    readlineThing.close();
 }
 
 
