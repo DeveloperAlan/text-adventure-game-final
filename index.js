@@ -45,7 +45,19 @@ function askGender() {
     })
 }
 
-var location = {};
+
+//Start lesson plan from here
+//location object that tells the player where they are in the world at the moment.
+var location = {
+    town: {
+        NPC: [],
+        Monsters: null,        
+    }, 
+    woods: {
+        NPC: [],
+        Monseters: finalBoss
+    },
+};
 
 
 //Player default object so that the students understand what the object would be.
