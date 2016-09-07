@@ -76,8 +76,6 @@ var priest = {
     }
 }
 
-priest.talk();
-
 //Player default object so that the students understand what the object would be.
 var Player = {
     name: "Alan",
