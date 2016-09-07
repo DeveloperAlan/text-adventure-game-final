@@ -51,6 +51,8 @@ function startingPoint() {
 }
 
 
+
+
 //Start lesson plan from here
 //location object that tells the player where they are in the world at the moment.
 var location = {    
@@ -87,6 +89,7 @@ var Player = {
     race: "Human",
     class: "Mage",
     gender: "Male",
+    currentLocation: "town",
     health: 20,
     skill: {
         1: null,
