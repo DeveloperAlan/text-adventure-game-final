@@ -54,7 +54,7 @@ function startingPoint() {
 //location object that tells the player where they are in the world at the moment.
 var location = {    
     town: {
-        NPC: [],
+        NPC: [priest],
         Monsters: null,        
     }, 
     woods: {
