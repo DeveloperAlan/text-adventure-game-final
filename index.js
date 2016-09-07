@@ -1,5 +1,7 @@
+//NPM module for readline.
 var readline = require('readline');
 
+//Instiatiate a new instance using readline class. Will teach classes and new instances in the next class.
 var readlineThing = readline.createInterface({
     input: process.stdin,
     output: process.stdout
@@ -44,6 +46,7 @@ function askGender() {
 }
 
 
+//Player default object so that the students understand what the object would be.
 var Player = {
     name: "Alan",
     race: "Human",
@@ -66,6 +69,8 @@ var Player = {
     }
 }
 
+
+//finalBoss character/enemy so that the students understand what the finalBoss looks like.
 var finalBoss = {
     name: "Alan",
     health: 100,
@@ -80,14 +85,17 @@ var finalBoss = {
     }
 }
 
+//Set function for name.
 function Name(answer) {
     Player.name = answer;
 }
 
+//Set function for gender
 function gender(answer) {
     Player.gender = answer;
 }
 
+//Set function for class with parameters if the character is chose the wrong class.
 function chooseClass(answer) {
     Player.class = answer;
     Player.skill["1"] = function() {
@@ -136,4 +144,6 @@ function chooseClass(answer) {
     }
 }
 
+
+//Starts the game
 game.start();
