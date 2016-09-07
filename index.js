@@ -48,7 +48,7 @@ function askGender() {
 
 //Start lesson plan from here
 //location object that tells the player where they are in the world at the moment.
-var location = {
+var location = {    
     town: {
         NPC: [],
         Monsters: null,        
@@ -56,9 +56,27 @@ var location = {
     woods: {
         NPC: [],
         Monseters: finalBoss
-    },
+    },  
 };
 
+
+//Added priest character to the game.
+var priest = {
+    talk: function() {
+        readlineThing.question("Good Day to you! Do you need healing from your wounds?", function(answer) {
+            if (answer.toLowerCase() == "yes") {
+                Player.health = 20;
+                console.log("May the gods watch over you");
+            } else if (answer.toLowerCase() == "no") {
+                console.log("May the gods watch over you");
+            } else {
+                console.log("Sorry, I'm deaf in one ear. Could you please repeat that?");
+            }
+        })
+    }
+}
+
+priest.talk();
 
 //Player default object so that the students understand what the object would be.
 var Player = {
